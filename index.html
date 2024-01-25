@@ -17,6 +17,12 @@
     font-display: swap;
   }
 
+  @font-face {
+    font-family: "Bliss-Heavy";
+    src: url("https://estorelabs.github.io/RC---230322-SF-23-Magne-Forte-60-OLMED/fonts/Bliss-Heavy.otf") format("opentype");
+    font-display: swap;
+  }
+
 html {
     scroll-behavior: smooth;
 }
@@ -1059,9 +1065,6 @@ html {
 }
 
 @media screen and (min-width: 325px){
-    #es-magne-b6.es-magne-b6 .es-kv__img--packshot {
-        max-width: 90%;
-    }
     #es-magne-b6.es-magne-b6 .es-kv__background {
         display: block;
     }
@@ -1242,6 +1245,7 @@ html {
     #es-magne-b6.es-magne-b6 .es-kv__title {
         font-size: 72px;
         margin-left: 10%;
+        margin-top: -75%;
     }
     #es-magne-b6.es-magne-b6 .es-kv__subtitle {
         font-size: 32px;
@@ -1551,6 +1555,73 @@ html {
       box-shadow: 0 0 0 rgb(150, 45, 56, 0);
     }
   }
+
+  @keyframes es-pulse4 {
+  0% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+  #es-magne-b6.es-magne-b6 .es-cross__label {
+  font-family: "Bliss-Heavy", sans-serif;
+  text-transform: uppercase;
+  font-size: clamp(0.75rem, 0.1033rem + 3.2333vw, 1.72rem);
+  color: #001883;
+  background-color: #FFF;
+  padding: 0.1rem 0.75rem;
+  max-width: fit-content;
+  margin: 6px auto;
+  text-align: center;
+  -webkit-box-shadow: 0px 0px 50px 35px rgba(107, 139, 199, 0.3);
+  -moz-box-shadow: 0px 0px 50px 35px rgba(107, 139, 199, 0.3);
+  box-shadow: 0px 0px 50px 35px rgba(107, 139, 199, 0.3);
+  animation: es-pulse4 2s infinite;
+}
+#es-magne-b6.es-magne-b6 .es-kv__label {
+  font-family: "Bliss-Heavy", sans-serif;
+  text-transform: uppercase;
+  font-size: clamp(0.75rem, -0.1011rem + 4.2553vw, 2rem);
+  max-width: 19ch;
+  color:#001883;
+  background-color: #FFF;
+  padding: 0.188rem 1rem;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  z-index: 2;
+  -webkit-box-shadow: 0px 0px 50px 35px rgba(107, 139, 199, 0.3);
+  -moz-box-shadow: 0px 0px 50px 35px rgba(107, 139, 199, 0.3);
+  box-shadow: 0px 0px 50px 35px rgba(107, 139, 199, 0.3);
+}
+
+@media (min-width: 576px) {
+  #es-magne-b6.es-magne-b6 .es-kv__label {
+    top: 38%;
+  }
+}
+
+@media (min-width: 768px) {
+  #es-magne-b6.es-magne-b6 .es-kv__label {
+    max-width: 17ch;
+    top: 41%;
+  }
+}
+
+#es-magne-b6.es-magne-b6 .es-kv__container {
+  position: relative;
+}
+
+@media (min-width: 404px) {
+#es-magne-b6.es-magne-b6 .es-kv__packshot {
+    padding-top: 24px;
+}
+}
+
 </style>
 <div class="es-magne-b6" id="es-magne-b6">
 
@@ -1561,6 +1632,7 @@ html {
       </div>
       <p class="es-kv__title">W Tobie <br> jest siła!</p>
       <p class="es-kv__subtitle">Wzmacniaj ją podwójną <br> dawką magnezu<sup class="es-index">6</sup></p>
+      <p class="es-kv__label">Teraz w nowym opakowaniu</p>
       <div class="es-kv__packshot">
         <img src="https://estorelabs.github.io/RC---230322-SF-23-Magne-Forte-60-OLMED/img/kv-packshot.webp" alt="Leki na uspokojenie bez recepty online; magnez lek Magne B6 Forte, 60 tabletek powlekanych, na objawy niedoboru magnezu." class="es-kv__img es-kv__img--packshot" />
       </div>
@@ -1799,6 +1871,7 @@ html {
 
   <div class="es-cross">
     <p class="es-cross__title">RODZINA MAGNE B<sub class="es-index">6</sub><sup class="es-index">®</sup></p>
+    <p class="es-cross__label">Teraz w nowych opakowaniach</p>
     <input type="checkbox" id="es-cross-expand-toggle" />
     <img src="https://estorelabs.github.io/RC---230322-SF-23-Magne-Forte-60-OLMED/img/cross-1.webp" alt="Jakie są sposoby radzenia sobie ze stresem? Uzupełnienie magnezu może złagodzić wahania nastroju i niepokój" class="es-cross__img" id="es-cross-packshot">
     <label for="es-cross-expand-toggle" id="es-cross-expand-btn">
